@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reuben Talbott</title>
+    <base target="_blank">
+    <script src="https://use.fontawesome.com/d4cd3d7191.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Oswald:600');
+    body {
+      background: #ffffff;
+      max-width: 700px;
+      margin: auto;
+      color: #444444;
+      font-family: "Montserrat", sans-serif;
+    }
+    div.header {
+      padding: 100px 0px;
+      text-align: center;
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      font-size: 50px;
+      color: #ff5e5e;
+      font-weight: bold;
+    }
+    div.info {
+      line-height: 1.6;
+      font-size: 19px;
+    }
+    a:not(.no-underline) {
+      border-bottom: 1px solid transparent;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.1s ease all;
+    }
+    a:not(.no-underline):hover {
+      border-bottom-color: #ff5e5e;
+      color: #ff5e5e;
+    }
+    div.flex {
+      display: flex;
+      margin: 20px 0px;
+    }
+    div.half {
+      width: 50%;
+    }
+    img {
+      width: 80%;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    div.corner {
+      font-size: 30px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    </style>
+  </head>
+  <body>
+<<<<<<< HEAD
+    <div class="header">REUBEN TALBOTT</div>
+    <div class="info">
+      Hello world! I'm Reuben and this is my website. My friend Chip and I run two Discord servers for programmers and gamers. Join them here:
+      <div class="flex">
+        <div class="half"><a title="gaming" class="no-underline" href="https://discord.gg/v8r5vKq"><img src="gaming.png"></a></div>
+        <div class="half"><a title="coding" class="no-underline" href="https://discord.gg/jrrrG7v"><img src="coding.png"></a></div>
+      </div>
+=======
+    <div class="container">
+      <div class="left"><div class="inner">
+        <h3>Reuben Talbott</h3>
+        <div>
+          <h5>Links</h5>
+          <a href="/discord">JOIN MY DISCORD</a>
+          <a href="/blog">BLOG</a>
+        </div>
+        <div>
+        </div>
+      </div></div>
+      <div class="right"><div class="inner">
+        <div id="top">
+          Hello world.
+        </div>
+        <div id="top">
+        I am Reuben and this is my Website, use the buttens on the left to navagate around. Also feal free to join my discord server.
+        </div>
+        <div id="top">
+        Reuben (;-)
+        </div>
+      </div></div>
+>>>>>>> origin/master
+    </div>
+    <div class="corner" title="Switch to Night Mode"><i class="fa fa-moon-o" aria-hidden="true"></i></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+    <script>
+      function toggle() {
+        var night = localStorage['nightmode'];
+        if(night == 0 || night == undefined) {
+          $('body').animate({
+            'background-color': '#2f3137',
+            'color': '#eeeeee'
+          }, 100);
+          $('.header').animate({
+            'color': '#eeeeee'
+          }, 100);
+          localStorage['nightmode'] = 1;
+          $('.corner').attr('title', 'Switch to Day Mode');
+        } else if(night == 1) {
+          $('body').animate({
+            'background-color': '#ffffff',
+            'color': '#444444'
+          }, 100);
+          $('.header').animate({
+            'color': '#ff5e5e'
+          }, 100);
+          localStorage['nightmode'] = 0;
+          $('.corner').attr('title', 'Switch to Night Mode');
+        }
+      }
+      $(function() {
+        $('.corner').click(toggle);
+      });
+    </script>
+  </body>
+</html>
