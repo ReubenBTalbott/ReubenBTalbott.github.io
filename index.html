@@ -74,8 +74,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
     <script>
+      var night;
       function toggle() {
-        var night = localStorage['nightmode'];
         if(night == 0 || night == undefined) {
           $('body').animate({
             'background-color': '#2f3137',
@@ -84,7 +84,6 @@
           $('.header').animate({
             'color': '#eeeeee'
           }, 100);
-          localStorage['nightmode'] = 1;
           $('.corner').attr('title', 'Switch to Day Mode');
         } else if(night == 1) {
           $('body').animate({
@@ -94,13 +93,11 @@
           $('.header').animate({
             'color': '#ff5e5e'
           }, 100);
-          localStorage['nightmode'] = 0;
           $('.corner').attr('title', 'Switch to Night Mode');
         }
       }
-      $(function() {
-        $('.corner').click(toggle);
-      });
+
+      $('.corner').click(toggle);
     </script>
   </body>
 </html>
