@@ -71,23 +71,23 @@
       var night;
       function toggle() {
         if(night == 0 || night == undefined) {
-          $('body').animate({
+          $('body').css({
             'background-color': '#2f3137',
             'color': '#eeeeee'
-          }, 100);
-          $('.header').animate({
+          });
+          $('.header').css({
             'color': '#eeeeee'
-          }, 100);
+          });
           night = 1;
           $('.corner').attr('title', 'Switch to Day Mode');
         } else if(night == 1) {
-          $('body').animate({
+          $('body').css({
             'background-color': '#ffffff',
             'color': '#444444'
-          }, 100);
-          $('.header').animate({
+          });
+          $('.header').css({
             'color': '#ff5e5e'
-          }, 100);
+          });
           $('.corner').attr('title', 'Switch to Night Mode');
           night = 0;
         }
