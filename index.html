@@ -73,10 +73,10 @@
       var night;
       function toggle() {
         if(night == 0 || night == undefined) {
-          $('body').animate({
+          $('body').css({
             background: '#2f3137',
             color: '#eeeeee'
-          }, 1000);
+          });
           $('.header').css({
             'color': '#eeeeee'
           });
