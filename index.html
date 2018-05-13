@@ -84,6 +84,7 @@
           $('.header').animate({
             'color': '#eeeeee'
           }, 100);
+          night = 1;
           $('.corner').attr('title', 'Switch to Day Mode');
         } else if(night == 1) {
           $('body').animate({
@@ -94,10 +95,11 @@
             'color': '#ff5e5e'
           }, 100);
           $('.corner').attr('title', 'Switch to Night Mode');
+          night = 0;
         }
       }
 
-      $('.corner').click(toggle);
+      $('.corner').click(toggle());
     </script>
   </body>
 </html>
